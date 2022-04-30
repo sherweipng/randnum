@@ -90,7 +90,11 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "Repo: <git@github.com/sherweipng/randnum.git|git@github.com/sherweipng/randnum.git>"
+                      "text": "Repo: "
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "<git@github.com/sherweipng/randnum.git|git@github.com/sherweipng/randnum.git>"
                     }
                   ]
                 },
