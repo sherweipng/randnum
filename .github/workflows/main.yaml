@@ -54,7 +54,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.18.0
         with:
-          payload: |
+          payload:
             {
               "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
               "blocks": [
@@ -62,13 +62,13 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": `GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}
+                    "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}
                             Name: Fred Flinstone
                             Matriculation: abc123
                             Email: fred@gmail.com
                             Repo:
                             Image name:
-                            Image url:`
+                            Image url:"
                   }
                 }
               ]
