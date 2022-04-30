@@ -63,52 +63,7 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "Name: Png Sher Wei"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "Matriculation: A0044651L"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "Email: e0941860@u.nus.edu"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "Repo: [git@github.com/sherweipng/randnum.git](git@github.com/sherweipng/randnum.git)"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "Image name: sherweipng/myfirstimg:1.0"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "Image url: [https://hub.docker.com/repository/docker/sherweipng/myfirstimg](https://hub.docker.com/repository/docker/sherweipng/myfirstimg)"
+                      "text": "Name: Png Sher Wei\nMatriculation: A0044651L\nEmail: e0941860@u.nus.edu\nRepo: <git@github.com/sherweipng/randnum.git|git@github.com/sherweipng/randnum.git>\nImage name: sherweipng/myfirstimg:1.0\nImage url: https://hub.docker.com/repository/docker/sherweipng/myfirstimg"
                     }
                   ]
                 }
