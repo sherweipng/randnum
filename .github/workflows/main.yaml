@@ -63,11 +63,12 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Type:*\nPaid Time Off"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Created by:*\n<example.com|Fred Enriquez>"
+                      "text": "Name: Fred Flinstone
+                            Matriculation: abc123
+                            Email: fred@gmail.com
+                            Repo:
+                            Image name:
+                            Image url:"
                     }
                   ]
                 }
