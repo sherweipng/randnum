@@ -63,12 +63,7 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "Name: Fred Flinstone
-                            Matriculation: abc123
-                            Email: fred@gmail.com
-                            Repo:
-                            Image name:
-                            Image url:"
+                      "text": "Name: Fred Flinstone\nMatriculation: abc123\nEmail: fred@gmail.com\nRepo:\nImage name:\nImage url:"
                     }
                   ]
                 }
