@@ -62,15 +62,13 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "GitHub Action build result: ${{ job.status }}\n
-                            ${{ github.event.pull_request.html_url || github.event.head_commit.url }}\n
+                    "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}\n
                             Name: Fred Flinstone\n
                             Matriculation: abc123\n
                             Email: fred@gmail.com\n
                             Repo:\n
                             Image name:\n
-                            Image url:
-                            "
+                            Image url:"
                   }
                 }
               ]
