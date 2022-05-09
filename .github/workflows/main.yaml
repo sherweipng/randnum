@@ -59,14 +59,14 @@ jobs:
         with:
           payload: |
             {
-              "text": "Test",
+              "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
               "blocks": [
                 {
                   "type": "section",
                   "text": 
                     {
                       "type": "mrkdwn",
-                      "text": "Test"
+                      "text": "Name: ${{ secrets.MY_NAME }}\nMatriculation: ${{ secrets.MY_MATRICNUM }}\nEmail: ${{ secrets.MYNUS_EMAIL }}\nRepo: ${{ github.repositoryUrl}}\nImage Name: ${{ secrets.DOCKERHUB_USERNAME }}\nmyfirstimg:${{ github.ref_name }}\nImage URL: ${{ secrets.MY_IMGURL }}"
                     }
                 }
               ]
