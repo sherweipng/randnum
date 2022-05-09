@@ -11,22 +11,22 @@ on:
 
 jobs:
   
-  checkout:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        ref: release
+  # checkout:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #     with:
+  #       ref: release
 
-  login:
-    runs-on: ubuntu-latest
-    steps:
-      -
-        name: Login to Docker Hub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+  # login:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     -
+  #       name: Login to Docker Hub
+  #       uses: docker/login-action@v1
+  #       with:
+  #         username: ${{ secrets.DOCKERHUB_USERNAME }}
+  #         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
   docker:
     runs-on: ubuntu-latest
@@ -66,7 +66,7 @@ jobs:
                   "text": 
                     {
                       "type": "mrkdwn",
-                      "text": "Name: ${{ secrets.MY_NAME }}\nMatriculation: ${{ secrets.MY_MATRICNUM }}\nEmail: ${{ secrets.MYNUS_EMAIL }}\nRepo: ${{ github.repositoryUrl}}\nImage Name: ${{ secrets.DOCKERHUB_USERNAME }}/myfirstimg:${{ github.ref_name }}\nImage URL: ${{ secrets.MY_IMGURL }}"
+                      "text": "Name: ${{ secrets.MY_NAME }}\nMatriculation: ${{ secrets.MY_MATRICNUM }}\nEmail: ${{ secrets.MYNUS_EMAIL }}\nRepo: ${{ github.repositoryUrl}}\nImage Name: ${{ secrets.DOCKERHUB_USERNAME }}\nmyfirstimg:${{ github.ref_name }}\nImage URL: ${{ secrets.MY_IMGURL }}"
                     }
                 }
               ]
