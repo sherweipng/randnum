@@ -1,8 +1,9 @@
 name: My Docker Image CI
 
 on:
-  push:
-    branches: [ release ]
+  release:
+    types: [ published]
+    tags: -v*
 
 jobs:
   
@@ -10,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-      with:
-        ref: release
 
   login:
     runs-on: ubuntu-latest
