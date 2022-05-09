@@ -46,7 +46,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sherweipng/myfirstimg:1.1
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/myfirstimg:${{ github.ref_name }}
 
 
       - 
@@ -56,38 +56,14 @@ jobs:
         with:
           payload: |
             {
+              "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
               "blocks": [
                 {
                   "type": "section",
                   "text": 
                     {
                       "type": "mrkdwn",
-                      "text": "Name: Png Sher Wei"
-                    },
-                  "text": 
-                    {
-                      "type": "mrkdwn",
-                      "text": "Matriculation: A0044651L"
-                    },
-                  "text": 
-                    {
-                      "type": "mrkdwn",
-                      "text": "Email: e0941860@u.nus.edu"
-                    },
-                  "text": 
-                    {
-                      "type": "mrkdwn",
-                      "text": "Repo: <github.com/sherweipng/randnum|git@github.com/sherweipng/randnum.git>"
-                    },
-                  "text": 
-                    {
-                      "type": "mrkdwn",
-                      "text": "Image name: sherweipng/myfirstimg:1.0"
-                    },
-                  "text": 
-                    {
-                      "type": "mrkdwn",
-                      "text": "Image url: <https://hub.docker.com/repository/docker/sherweipng/myfirstimg|https://hub.docker.com/repository/docker/sherweipng/myfirstimg>"
+                      "text": "Name: ${{ secrets.MY_NAME }}"\nMatriculation: ${{ secrets.MY_MATRICNUM }}\nEmail: ${{ secrets.MYNUS_EMAIL }}\nRepo: ${{ github.repositoryUrl}}\nImage Name: ${{ secrets.DOCKERHUB_USERNAME }}/myfirstimg:${{ github.ref_name }}\nImage URL: ${{ secrets.MY_IMGURL }}"
                     }
                 }
               ]
@@ -95,3 +71,4 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+          
