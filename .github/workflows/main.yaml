@@ -56,7 +56,6 @@ jobs:
         with:
           payload: |
             {
-              "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
               "blocks": [
                 {
                   "type": "section",
@@ -64,53 +63,32 @@ jobs:
                     {
                       "type": "mrkdwn",
                       "text": "Name: Png Sher Wei"
-                    }
-                  
-                },
-                {
-                  "type": "section",
+                    },
                   "text": 
                     {
                       "type": "mrkdwn",
                       "text": "Matriculation: A0044651L"
-                    }
-                  
-                },
-                {
-                  "type": "section",
+                    },
                   "text": 
                     {
                       "type": "mrkdwn",
                       "text": "Email: e0941860@u.nus.edu"
-                    }
-                  
-                },
-                {
-                  "type": "section",
+                    },
                   "text": 
                     {
                       "type": "mrkdwn",
                       "text": "Repo: <github.com/sherweipng/randnum|git@github.com/sherweipng/randnum.git>"
-                    }
-                  
-                },
-                {
-                  "type": "section",
+                    },
                   "text": 
                     {
                       "type": "mrkdwn",
                       "text": "Image name: sherweipng/myfirstimg:1.0"
-                    }
-                  
-                },
-                {
-                  "type": "section",
+                    },
                   "text": 
                     {
                       "type": "mrkdwn",
                       "text": "Image url: <https://hub.docker.com/repository/docker/sherweipng/myfirstimg|https://hub.docker.com/repository/docker/sherweipng/myfirstimg>"
                     }
-                  
                 }
               ]
             }
