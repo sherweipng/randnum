@@ -66,7 +66,7 @@ jobs:
                   "text": 
                     {
                       "type": "mrkdwn",
-                      "text": "Name: ${{ secrets.MY_NAME }}\nMatriculation: ${{ secrets.MY_MATRICNUM }}\nEmail: ${{ secrets.MYNUS_EMAIL }}\nRepo: ${{ github.repositoryUrl}}\nImage Name: ${{ secrets.DOCKERHUB_USERNAME }}\nmyfirstimg:${{ github.ref_name }}\nImage URL: ${{ secrets.MY_IMGURL }}"
+                      "text": "Test"
                     }
                 }
               ]
