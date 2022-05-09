@@ -2,7 +2,7 @@ name: My Docker Image CI
 
 on:
   release:
-    types: [ published]
+    types: [ published ]
     tags: -v*
 
 # on:
